@@ -25,4 +25,3 @@ export function getCurrentTab() {
   };
   return browser.tabs.query(queryInfo);
 }
-

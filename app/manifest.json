@@ -20,17 +20,18 @@
         "http://*/*",
         "https://*/*"
       ],
-      "css": [
-        "styles/contentscript.css"
-      ],
       "js": [
         "scripts/contentscript.js"
       ],
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "all_frames": false
     }
   ],
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
   ]
 }
