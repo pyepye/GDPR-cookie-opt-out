@@ -84,6 +84,9 @@ export function optanonOptOut() {
       document.querySelector('#optanon-menu .menu-item-performance a'),
       document.querySelector('#optanon-menu .menu-item-functional a'),
       document.querySelector('#optanon-menu .menu-item-advertising a'),
+      document.querySelector('#optanon-menu .menu-item-performance button'),
+      document.querySelector('#optanon-menu .menu-item-functional button'),
+      document.querySelector('#optanon-menu .menu-item-advertising button'),
     ];
     cookieTypes.forEach((element) => {
       if (element !== undefined && element !== null) {
@@ -98,19 +101,20 @@ export function optanonOptOut() {
         }
       }
     });
-    let saveButton = document.querySelector('a[title="Save Settings"]');
-    if (saveButton !== undefined && saveButton !== null) {
-      saveButton.click();
-    } else {
-      saveButton = document.querySelector('.optanon-white-button-middle a');
-      if (saveButton !== undefined && saveButton !== null) {
-        saveButton.click();
+    const saveButtons = [
+      document.querySelector('a[title="Save Settings"]'),
+      document.querySelector('button[title="Save Settings"]'),
+      document.querySelector('.optanon-white-button-middle a'),
+      document.querySelector('.optanon-white-button-middle button'),
+    ];
+    saveButtons.forEach((button) => {
+      if (button !== undefined && button !== null) {
+        button.click();
       }
-    }
+    });
     console.log('Opted out of Optanon One Trust');
   }
 }
-
 
 export function shareThisOptOut() {
   const showPurposes = document.querySelector('a.intro_showPurposes');
@@ -128,67 +132,78 @@ export function shareThisOptOut() {
 }
 
 
-export function cmpOptOut() {
-  let showPurposes = document.querySelector('.cmp-btn-link');
-  // console.log('showPurposes', showPurposes);
-  // showPurposes = document.querySelector('.cmp-btn-link');
-  // console.log('showPurposes2', showPurposes);
+// export function cmpOptOut() {
+//   let showPurposes = document.querySelector('.cmp-btn-link');
+//   // console.log('showPurposes', showPurposes);
+//   // showPurposes = document.querySelector('.cmp-btn-link');
+//   // console.log('showPurposes2', showPurposes);
 
-  delay(2000).then(() => {
-    showPurposes = document.querySelector('.cmp-btn-link');
-    console.log('showPurposes delay', showPurposes);
-    showPurposes = document.querySelector('.cmp-btn-link');
-    console.log('showPurposes delay2', showPurposes);
-  });
+//   delay(2000).then(() => {
+//     showPurposes = document.querySelector('.cmp-btn-link');
+//     console.log('showPurposes delay', showPurposes);
+//     showPurposes = document.querySelector('.cmp-btn-link');
+//     console.log('showPurposes delay2', showPurposes);
+//   });
 
-  // if (showPurposes !== undefined && showPurposes !== null) {
-  //   showPurposes.click();
-  //   const enabled = document.querySelectorAll('.switch_isSelected');
-  //   enabled.forEach((element) => {
-  //     element.click();
-  //   });
-  //   delay(10).then(() => {
-  //     document.querySelector('.details_save').click();
-  //     console.log('Opted out of ShareThis');
-  //   });
-  // }
-}
-
-
-export function evidonOptOut() {
-  const button = document.querySelector('.evidon-barrier-cookiebutton');
-  if (button !== undefined && button !== null) {
-    button.click();
-    // Need to wait for ajax here:
-    // const optOutAll = document.querySelector('#opt-out-all-button');
-    // if (optOutAll !== undefined && optOutAll !== null) {
-    //   optOutAll.click();
-    // }
-    // }).catch((error) => {
-    //   console.log('Error', error);
-    // });
-  }
-}
+//   // if (showPurposes !== undefined && showPurposes !== null) {
+//   //   showPurposes.click();
+//   //   const enabled = document.querySelectorAll('.switch_isSelected');
+//   //   enabled.forEach((element) => {
+//   //     element.click();
+//   //   });
+//   //   delay(10).then(() => {
+//   //     document.querySelector('.details_save').click();
+//   //     console.log('Opted out of ShareThis');
+//   //   });
+//   // }
+// }
 
 
-export function trusteOptOut() {
-  let viewCookieSettings;
-  viewCookieSettings = document.querySelector('.shp');
-  if (viewCookieSettings !== undefined && viewCookieSettings !== null) {
-    viewCookieSettings.click();
-    // Need to wait for ajax here:
-    // const optOutAll = document.querySelector('#opt-out-all-button');
-    // if (optOutAll !== undefined && optOutAll !== null) {
-    //   optOutAll.click();
-    // }
-    // }).catch((error) => {
-    //   console.log('Error', error);
-    // });
-  }
-  delay(2000).then(() => {
-    viewCookieSettings = document.querySelector('.shp');
-    if (viewCookieSettings !== undefined && viewCookieSettings !== null) {
-      viewCookieSettings.click();
-    }
-  });
-}
+// export function evidonOptOut() {
+//   const button = document.querySelector('.evidon-barrier-cookiebutton');
+//   if (button !== undefined && button !== null) {
+//     button.click();
+//     // Need to wait for ajax here:
+//     // const optOutAll = document.querySelector('#opt-out-all-button');
+//     // if (optOutAll !== undefined && optOutAll !== null) {
+//     //   optOutAll.click();
+//     // }
+//     // }).catch((error) => {
+//     //   console.log('Error', error);
+//     // });
+//   }
+// }
+
+
+// export function trusteOptOut() {
+//   let viewCookieSettings;
+//   viewCookieSettings = document.querySelector('.shp');
+//   if (viewCookieSettings !== undefined && viewCookieSettings !== null) {
+//     viewCookieSettings.click();
+//     // Need to wait for ajax here:
+//     // const optOutAll = document.querySelector('#opt-out-all-button');
+//     // if (optOutAll !== undefined && optOutAll !== null) {
+//     //   optOutAll.click();
+//     // }
+//     // }).catch((error) => {
+//     //   console.log('Error', error);
+//     // });
+//   }
+//   delay(2000).then(() => {
+//     viewCookieSettings = document.querySelector('.shp');
+//     if (viewCookieSettings !== undefined && viewCookieSettings !== null) {
+//       viewCookieSettings.click();
+//     }
+//   });
+// }
+
+
+// export function trustArcOptOut() {
+//   const show = document.querySelector('#truste-show-consent');
+//   show.click();
+//   const noButtons = document.querySelectorAll('span[aria-label="Choice: no"]');
+//   noButtons.forEach((button) => {
+//     button.click();
+//   });
+//   console.log('Opted out of TrustArc');
+// }
