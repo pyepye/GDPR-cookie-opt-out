@@ -33,7 +33,6 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
 ## ToDo
 * Examples
     * https://www.techradar.com
-    * https://www.cision.com/us/2018/02/top-25-u-s-media-outlets-on-social/
     * https://www.ft.com/ / https://www.investorschronicle.co.uk/
     * https://www.isa.org/resoureces/media-outlets/
     * https://www.mirror.co.uk/
@@ -56,6 +55,18 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://www.goodhousekeeping.com/
     * https://www.etsy.com/uk/
     * https://www.docker.com/
+    * http://cj.dotomi.com/m7122wktsA/krw/98BF98CG/ACHAHC/8/8/8?k=kzpk%3DGGE9BEC98_tlyjo%3C%3Co00w%3A%2F%2F333.qkvxvj5.jvt%3AF7%2Fjspjr-9BG9GB-87AE87BF%3C%3CN%3C%3C%3C8%3C8%3C7%3C7%3C
+    * https://www.ocs.fr/
+    * http://formula1.com
+    * https://www.ebay.co.uk/gdpr
+    * https://www.trustedreviews.com
+    * https://www.wineturtle.com/best-wine-decanter-reviews/
+    * https://www.bestproducts.com/cars/auto-accessories/g199/best-car-phone-dashboard-mounts/
+    * https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
+    * https://road.cc/content/forum/214674-rollers-resistance
+    * https://www.theatlantic.com/health/archive/2019/01/doctor-rapp/579634/
+    * https://www.seriouseats.com/recipes/2008/06/traditional-old-fashioned-recipe.html
+
 * Delay loading
     * (TrustArc) https://www.addthis.com/privacy/opt-out/
     * (TrustArc) https://www.oracle.com/
@@ -154,5 +165,6 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://videologygroup.com/en/learn-about-interest-based-ads-opt-out
     * https://www.thetimes.co.uk/
     * https://www.thesun.co.uk/
+    * https://www.cision.com/us/2018/02/top-25-u-s-media-outlets-on-social/
 * ShareThis
     * https://www.sharethis.com/privacy/
