@@ -83,7 +83,10 @@ function runSelectors() {
   // }
 
   /* TrustArc */
-  /* Has loading delay - https://www.trustarc.com/ */
+  /* Has loading delays -
+    Sometimes before manage settings  - https://www.formula1.com/
+    Sometimes after manage settings - https://www.trustarc.com/
+  */
   // const TrustArc = document.querySelector('.trustarc-banner');
   // if (TrustArc !== undefined && TrustArc !== null) {
   //   trustArcOptOut();

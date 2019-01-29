@@ -202,8 +202,14 @@ export function shareThisOptOut() {
 //   const show = document.querySelector('#truste-show-consent');
 //   show.click();
 //   const noButtons = document.querySelectorAll('span[aria-label="Choice: no"]');
+//   let noPressed = false;
 //   noButtons.forEach((button) => {
 //     button.click();
+//     noPressed = true;
 //   });
+//   if (noPressed) {
+//     const submit = document.querySelector('.pdynamicbutton a.submit');
+//     submit.click();
+//   }
 //   console.log('Opted out of TrustArc');
 // }
