@@ -1,49 +1,30 @@
-import { getStorageData, setStorageData, delay } from './utils';
+import {
+  getStorageData, setStorageData, delay, clickOneElement, clickElement,
+  clickAllElementsSameSelector,
+} from './utils';
 
 export async function oathOptOut() {
   const setting = await getStorageData('optedOut');
   const { optedOut } = setting;
 
   if (!optedOut) {
-    let moreOptions = null;
-    moreOptions = document.querySelector('.moreOptions');
-    if (moreOptions !== undefined && moreOptions !== null) {
-      moreOptions.click();
-    }
-    moreOptions = document.querySelector('button[name=moreOptions]');
-    if (moreOptions !== undefined && moreOptions !== null) {
-      moreOptions.click();
-    }
-    const manage = document.querySelector('.boxed-content a');
-    if (manage !== undefined && manage !== null) {
-      manage.click();
-    }
+    clickOneElement(['.moreOptions', 'button[name=moreOptions]']);
+    clickElement('.boxed-content a');
     const links = document.querySelectorAll('.our-partners-text a');
     if (links.length === 3) {
       const show = links[links.length - 1];
       show.click();
     }
-    const iabTab = document.querySelector('label[for=iabTab]');
-    if (iabTab !== undefined && iabTab !== null) {
-      iabTab.click();
-      const deselectAll = document.querySelector('.tpp-deselect-all');
-      if (deselectAll !== undefined && deselectAll !== null) {
-        deselectAll.click();
-        const done = document.querySelector('input[name=agree].btn-primary');
-        if (done !== undefined && done !== null) {
+    if (clickElement('label[for=iabTab]')) {
+      if (clickElement('.tpp-deselect-all')) {
+        if (clickElement('input[name=agree].btn-primary')) {
           setStorageData({ optedOut: true });
-          done.click();
         }
       }
     }
   } else {
-    const done = document.querySelector('input[name=agree].btn-primary');
-    if (done !== undefined && done !== null) {
-      done.click();
-    }
-    const ok = document.querySelector('input.btn-primary.agree');
-    if (ok !== undefined && ok !== null) {
-      ok.click();
+    clickElement('input[name=agree].btn-primary');
+    if (clickElement('input.btn-primary.agree')) {
       setStorageData({ optedOut: false });
       console.log('Opted out of Oath');
     }
@@ -52,83 +33,66 @@ export async function oathOptOut() {
 
 
 export function quantcastOptOut() {
-  const showPurposes = document.querySelector('#qc-cmp-purpose-button');
-  if (showPurposes !== undefined && showPurposes !== null) {
-    showPurposes.click();
-    document.querySelector('.qc-cmp-secondary-button').click();
-    document.querySelector('.qc-cmp-save-and-exit').click();
-    console.log('Opted out of Quantcast');
-  }
+  clickElement('#qc-cmp-purpose-button');
+  clickElement('.qc-cmp-secondary-button');
+  clickElement('.qc-cmp-save-and-exit');
+  console.log('Opted out of Quantcast');
 }
 
 
 export function ezCookieOptOut() {
-  const cookieDetails = document.querySelector('#ez-cookie-details');
-  if (cookieDetails !== undefined && cookieDetails !== null) {
-    cookieDetails.click();
-    document.querySelector('#ez-cookie-option-preference').value = '0';
-    document.querySelector('#ez-cookie-option-statistics').value = '0';
-    document.querySelector('#ez-cookie-option-marketing').value = '0';
-    document.querySelector('#ez-ok-cookies').click();
-    console.log('Opted out of EZ Cookie');
-  }
+  clickElement('#ez-cookie-details');
+  document.querySelector('#ez-cookie-option-preference').value = '0';
+  document.querySelector('#ez-cookie-option-statistics').value = '0';
+  document.querySelector('#ez-cookie-option-marketing').value = '0';
+  clickElement('#ez-ok-cookies');
+  console.log('Opted out of EZ Cookie');
 }
 
 
 export function optanonOptOut() {
-  const cookieSettings = document.querySelector('.optanon-toggle-display');
-  if (cookieSettings !== undefined && cookieSettings !== null) {
-    cookieSettings.click();
-    let checkbox = null;
-    const cookieTypes = [
-      document.querySelector('#optanon-menu .menu-item-performance a'),
-      document.querySelector('#optanon-menu .menu-item-functional a'),
-      document.querySelector('#optanon-menu .menu-item-advertising a'),
-      document.querySelector('#optanon-menu .menu-item-performance button'),
-      document.querySelector('#optanon-menu .menu-item-functional button'),
-      document.querySelector('#optanon-menu .menu-item-advertising button'),
-    ];
-    cookieTypes.forEach((element) => {
-      if (element !== undefined && element !== null) {
-        element.click();
-        checkbox = document.querySelector('.optanon-status-checkbox');
-        if (checkbox.getAttribute('aria-checked') === 'true') {
-          checkbox.click();
-        }
-        checkbox = document.querySelector('.optanon-status-on input');
-        if (checkbox !== undefined && checkbox !== null) {
-          checkbox.click();
-        }
-      }
-    });
-    const saveButtons = [
-      document.querySelector('a[title="Save Settings"]'),
-      document.querySelector('button[title="Save Settings"]'),
-      document.querySelector('.optanon-white-button-middle a'),
-      document.querySelector('.optanon-white-button-middle button'),
-    ];
-    saveButtons.forEach((button) => {
-      if (button !== undefined && button !== null) {
-        button.click();
-      }
-    });
-    console.log('Opted out of Optanon One Trust');
-  }
+  clickElement('.optanon-toggle-display');
+  let checkbox = null;
+  const cookieTypes = [
+    '#optanon-menu .menu-item-performance a',
+    '#optanon-menu .menu-item-functional a',
+    '#optanon-menu .menu-item-advertising a',
+    '#optanon-menu .menu-item-performance button',
+    '#optanon-menu .menu-item-functional button',
+    '#optanon-menu .menu-item-advertising button',
+  ];
+  cookieTypes.forEach((selector) => {
+    clickElement(selector);
+    checkbox = document.querySelector('.optanon-status-checkbox');
+    if (checkbox.getAttribute('aria-checked') === 'true') {
+      checkbox.click();
+    }
+    checkbox = document.querySelector('.optanon-status-on input');
+    if (checkbox !== undefined && checkbox !== null) {
+      checkbox.click();
+    }
+  });
+  const saveSelectors = [
+    'a[title="Save Settings"]',
+    'button[title="Save Settings"]',
+    '.optanon-white-button-middle a',
+    '.optanon-white-button-middle button',
+  ];
+  clickOneElement(saveSelectors);
+  console.log('Opted out of Optanon One Trust');
 }
 
 export function shareThisOptOut() {
-  const showPurposes = document.querySelector('a.intro_showPurposes');
-  if (showPurposes !== undefined && showPurposes !== null) {
-    showPurposes.click();
-    const enabled = document.querySelectorAll('.switch_isSelected');
-    enabled.forEach((element) => {
-      element.click();
-    });
-    delay(10).then(() => {
-      document.querySelector('.details_save').click();
-      console.log('Opted out of ShareThis');
-    });
-  }
+  clickElement('a.intro_showPurposes');
+  // Only exists if toggles are turned on
+  clickAllElementsSameSelector('.switch_isSelected');
+  clickElement('a.details_showVendor');
+  clickAllElementsSameSelector('.switch_isSelected');
+
+  delay(10).then(() => {
+    clickElement('.details_save');
+    console.log('Opted out of ShareThis');
+  });
 }
 
 

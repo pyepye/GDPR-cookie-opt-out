@@ -2,60 +2,45 @@ import {
   oathOptOut, quantcastOptOut, ezCookieOptOut, optanonOptOut, shareThisOptOut,
   // evidonOptOut, trusteOptOut, cmpOptOut, trustArcOptOut  - Do not work
 } from './workers';
+import { selectorExists } from './utils';
+
 
 let interval = '';
 let loopCount = 0;
 
 function runSelectors() {
-  console.log(`\n\nrunSelectors: ${loopCount}\n\n`);
+  console.log(`runSelectors: ${loopCount}`);
 
   /* Quantcast */
-  let quantcast = null;
-  quantcast = document.querySelector('.qc-cmp-showing');
-  if (quantcast !== undefined && quantcast !== null) {
+  if (selectorExists(['.qc-cmp-showing'])) {
     quantcastOptOut();
     clearInterval(interval);
   }
 
 
   /* Oath family */
-  const oathContainers = [
-    document.querySelector('.consent-wizard'),
-    document.querySelector('.consent-container'),
-  ];
-  oathContainers.forEach((container) => {
-    if (container !== undefined && container !== null) {
-      oathOptOut();
-      clearInterval(interval);
-    }
-  });
+  if (selectorExists(['.consent-wizard', '.consent-container'])) {
+    oathOptOut();
+    clearInterval(interval);
+  }
 
 
   /* EZ Cookie */
-  const ezCookie = document.querySelector('#ez-cookie-dialog');
-  if (ezCookie !== undefined && ezCookie !== null) {
+  if (selectorExists(['#ez-cookie-dialog'])) {
     ezCookieOptOut();
     clearInterval(interval);
   }
 
 
   /* Optanon OneTrust */
-  /* Find out which one delay is needed for:
-      * https://www.onetrust.com/
-      * https://videologygroup.com/en/learn-about-interest-based-ads-opt-out
-      * https://www.thetimes.co.uk/
-      * https://www.thesun.co.uk/
-  */
-  const optanon = document.querySelector('.optanon-alert-box-wrapper');
-  if (optanon !== undefined && optanon !== null) {
+  if (selectorExists(['.optanon-alert-box-wrapper'])) {
     optanonOptOut();
     clearInterval(interval);
   }
 
 
   /* Sharethis */
-  const appGdpr = document.querySelector('.app_gdpr');
-  if (appGdpr !== undefined && appGdpr !== null) {
+  if (selectorExists(['.app_gdpr'])) {
     shareThisOptOut();
     clearInterval(interval);
   }

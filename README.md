@@ -42,38 +42,52 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://www.mirror.co.uk/
     * https://www.kantarmedia.com/ie/cookies
     * http://www.churchnewspaper.com/
-    * https://www.ibtimes.co.uk/
     * https://www.itv.com/news/
-    * https://www.newscientist.com/
     * https://www.smallholder.co.uk/
     * https://www.civicuk.com/cookie-control
-    * https://info.evidon.com/pub_info/8266
-    * http://www.pressreader.com/
-    * https://www.metoffice.gov.uk/
-    * https://www.adobe.com
     * https://crimtan.com/cookie-opt-out/
-    * https://www.goodhousekeeping.com/
     * https://www.etsy.com/uk/
-    * https://www.docker.com/
     * http://cj.dotomi.com/m7122wktsA/krw/98BF98CG/ACHAHC/8/8/8?k=kzpk%3DGGE9BEC98_tlyjo%3C%3Co00w%3A%2F%2F333.qkvxvj5.jvt%3AF7%2Fjspjr-9BG9GB-87AE87BF%3C%3CN%3C%3C%3C8%3C8%3C7%3C7%3C
     * https://www.ocs.fr/
-    * http://formula1.com
-    * https://www.ebay.co.uk/gdpr
-    * https://www.trustedreviews.com
-    * https://www.wineturtle.com/best-wine-decanter-reviews/
-    * https://www.bestproducts.com/cars/auto-accessories/g199/best-car-phone-dashboard-mounts/
     * https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
-    * https://road.cc/content/forum/214674-rollers-resistance
-    * https://www.theatlantic.com/health/archive/2019/01/doctor-rapp/579634/
-    * https://www.seriouseats.com/recipes/2008/06/traditional-old-fashioned-recipe.html
+    * https://surbma.com/privacy-cookie-policy/
+
+    Didomi
+    https://www.ibtimes.co.uk/
+
+    Oil - https://github.com/as-ideas/oil
+    https://www.metoffice.gov.uk/
+
+    Evidon
+    https://www.goodhousekeeping.com/
+    https://www.bestproducts.com/cars/auto-accessories/g199/best-car-phone-dashboard-mounts/
+    https://www.adobe.com
+
+    StreamAmp
+    https://www.wineturtle.com/best-wine-decanter-reviews/
+    https://road.cc/content/forum/214674-rollers-resistance
 
 * Delay loading
-    * (TrustArc) https://www.addthis.com/privacy/opt-out/
-    * (TrustArc) https://www.oracle.com/
-    * (Evidon) http://ign.com
-    * (Evidon with cookies blocked popup) https://www.cbsnews.com/ - https://uk.reuters.com/ - https://www.economist.com/
+    * (Truste TrustArc - Buttons)
+        https://www.trustarc.com/
+        https://www.oracle.com/
+        https://www.formula1.com/
+    * (Truste TrustArc - Slider)
+        https://www.addthis.com/privacy/opt-out/
+        https://www.docker.com/
+    * (Evidon)
+        http://ign.com
+    * (Evidon with cookies blocked popup)
+        https://www.cbsnews.com/
+        https://uk.reuters.com/
+        https://www.economist.com/
 * Different page
     * https://www.theguardian.com/uk
+    * https://www.ebay.co.uk/gdpr
+    * https://www.timeout.com/
+* Agree only
+    * https://www.newscientist.com/
+    * http://www.pressreader.com/
 
 * On install opt-out from:
     * http://optout.aboutads.info/?lang=EN&c=2#!%2F
@@ -156,15 +170,18 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * http://www.cityam.com/
     * https://www.rugbydump.com
     * https://www.euronews.com/news/europe
+    * https://www.trustedreviews.com
+    * https://www.seriouseats.com/recipes/2008/06/traditional-old-fashioned-recipe.html
+    * https://www.theatlantic.com/health/archive/2019/01/doctor-rapp/579634/
 * Oath
     * https://www.engadget.com/
 * EZ cookie
     * https://www.techiediaries.com/react-ajax/
-* One Trust
+* Optanon OneTrust
     * https://www.onetrust.com/
+    * https://www.cookielaw.org/optanon-eprivacy/
     * https://videologygroup.com/en/learn-about-interest-based-ads-opt-out
     * https://www.thetimes.co.uk/
     * https://www.thesun.co.uk/
-    * https://www.cision.com/us/2018/02/top-25-u-s-media-outlets-on-social/
 * ShareThis
-    * https://www.sharethis.com/privacy/
+    * https://www.sharethis.com/support/faq/gdpr-compliance-tool-faq/
