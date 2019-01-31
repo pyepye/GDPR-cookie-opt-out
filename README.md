@@ -32,25 +32,51 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
 
 ## ToDo
 * Examples
-    * https://www.techradar.com
-    * https://www.ft.com/ / https://www.investorschronicle.co.uk/
-    * https://www.isa.org/resoureces/media-outlets/
-    * https://www.mirror.co.uk/
+    * All? https://advertisingconsent.eu/ / https://advertisingconsent.eu/cmp-list/
+
     * https://www.express.co.uk/
-    * https://www.independent.co.uk/
-    * https://www.dailymail.co.uk/news/index.html / https://metro.co.uk/ / https://www.dailystar.co.uk/
-    * https://www.mirror.co.uk/
-    * https://www.kantarmedia.com/ie/cookies
     * http://www.churchnewspaper.com/
-    * https://www.itv.com/news/
     * https://www.smallholder.co.uk/
-    * https://www.civicuk.com/cookie-control
-    * https://crimtan.com/cookie-opt-out/
     * https://www.etsy.com/uk/
+    * https://www.conversantmedia.com/home
     * http://cj.dotomi.com/m7122wktsA/krw/98BF98CG/ACHAHC/8/8/8?k=kzpk%3DGGE9BEC98_tlyjo%3C%3Co00w%3A%2F%2F333.qkvxvj5.jvt%3AF7%2Fjspjr-9BG9GB-87AE87BF%3C%3CN%3C%3C%3C8%3C8%3C7%3C7%3C
     * https://www.ocs.fr/
-    * https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
-    * https://surbma.com/privacy-cookie-policy/
+    * https://www.tomshardware.co.uk/
+
+    AppNexus CMP
+    https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
+
+    Crimtan
+    https://crimtan.com/cookie-opt-out/
+
+    Civic Cookie control
+    https://www.civicuk.com/cookie-control
+    https://prismrecruitment.co.uk/privacy-policy/
+
+    DMG Media
+    https://metro.co.uk/
+    https://www.dailymail.co.uk/news/index.html
+    https://www.dailystar.co.uk/
+
+    Cookiebot / Cybot
+    https://www.kantarmedia.com/ie/cookies
+    https://www.prism.uk.com/article/data-protection-need-know/
+
+    Captify
+    https://www.mirror.co.uk/
+
+    Piwik
+    https://piwik.pro/gdpr-consent-manager/
+
+    Financial Times
+    https://www.ft.com/
+    https://www.investorschronicle.co.uk/
+
+    Future Consent Management
+    http://www.gizmodo.co.uk/
+    http://www.lifehacker.co.uk/
+    https://www.techradar.com
+    https://www.itproportal.com/features/gdpr-and-the-art-of-consent-management/
 
     Didomi
     https://www.ibtimes.co.uk/
@@ -63,9 +89,6 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     https://www.bestproducts.com/cars/auto-accessories/g199/best-car-phone-dashboard-mounts/
     https://www.adobe.com
 
-    StreamAmp
-    https://www.wineturtle.com/best-wine-decanter-reviews/
-    https://road.cc/content/forum/214674-rollers-resistance
 
 * Delay loading
     * (Truste TrustArc - Buttons)
@@ -88,6 +111,10 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
 * Agree only
     * https://www.newscientist.com/
     * http://www.pressreader.com/
+    * https://www.isa.org/resoureces/media-outlets/
+    * https://www.itv.com/news/
+    * AddApptr e.g. https://www.lite.games/datenschutz/
+    * Publy e.g. https://www.bantoa.com/en/
 
 * On install opt-out from:
     * http://optout.aboutads.info/?lang=EN&c=2#!%2F
@@ -173,6 +200,7 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://www.trustedreviews.com
     * https://www.seriouseats.com/recipes/2008/06/traditional-old-fashioned-recipe.html
     * https://www.theatlantic.com/health/archive/2019/01/doctor-rapp/579634/
+    * https://www.independent.co.uk/
 * Oath
     * https://www.engadget.com/
 * EZ cookie
@@ -185,3 +213,8 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://www.thesun.co.uk/
 * ShareThis
     * https://www.sharethis.com/support/faq/gdpr-compliance-tool-faq/
+* Surbma (Wordpress plugin)
+    * https://surbma.com/
+* StreamAmp
+    * https://www.wineturtle.com/
+    * https://road.cc/

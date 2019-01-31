@@ -95,14 +95,47 @@ export function shareThisOptOut() {
   });
 }
 
+export function surbmaOptOut() {
+  clickElement('.snackbar-container button');
+  const elements = document.querySelectorAll('.surbma-gpga-button-right button');
+  elements.forEach((element) => {
+    if (element.textContent === 'Decline') {
+      element.click();
+    }
+  });
+  console.log('Opted out of Surbma');
+}
+
+export async function streamAmpOptOut() {
+  clickElement('a.details_learnMore--1Xn9X');
+  const links = document.querySelectorAll('.app_gdpr--2k2uB a');
+  links.forEach((link) => {
+    if (link.textContent === 'update your preferences here') {
+      link.click();
+    }
+  });
+  const learnMore = document.querySelectorAll('.summary_learnMore--QHtl7');
+  // Need to use for loop despite eslint due to forEach not allowing await
+  for (const element of learnMore) {
+    element.click();
+    console.log(element);
+    await delay(10);
+    clickAllElementsSameSelector('.switch_isSelected--17KWm input');
+    clickElement('button.details_back--2ZlLi');
+  }
+  clickElement('button.details_save--1ja7w');
+  console.log('Opted out of StreamAmp');
+}
+
 
 // export function cmpOptOut() {
 //   let showPurposes = document.querySelector('.cmp-btn-link');
+//   console.log('cmpOptOut', showPurposes);
 //   // console.log('showPurposes', showPurposes);
 //   // showPurposes = document.querySelector('.cmp-btn-link');
 //   // console.log('showPurposes2', showPurposes);
-
 //   delay(2000).then(() => {
+
 //     showPurposes = document.querySelector('.cmp-btn-link');
 //     console.log('showPurposes delay', showPurposes);
 //     showPurposes = document.querySelector('.cmp-btn-link');

@@ -1,5 +1,6 @@
 import {
   oathOptOut, quantcastOptOut, ezCookieOptOut, optanonOptOut, shareThisOptOut,
+  surbmaOptOut, streamAmpOptOut,
   // evidonOptOut, trusteOptOut, cmpOptOut, trustArcOptOut  - Do not work
 } from './workers';
 import { selectorExists } from './utils';
@@ -45,10 +46,24 @@ function runSelectors() {
     clearInterval(interval);
   }
 
+  /* Surbma */
+  const snackbar = document.querySelector('.snackbar-container button');
+  if (snackbar !== undefined && snackbar !== null && snackbar.textContent === 'Cookie settings') {
+    surbmaOptOut();
+    clearInterval(interval);
+  }
 
-  /* Consent-Management Platform */
-  // const cmpContainer = document.querySelector('#cmp-container-id');
-  // if (cmpContainer !== undefined && cmpContainer !== null) {
+  /* StreamAmp */
+  if (selectorExists(['.app_gdpr--2k2uB'])) {
+    streamAmpOptOut();
+    clearInterval(interval);
+  }
+
+  /* Future Consent-Management Platform */
+  /*
+    Does not work due to not being able to find any node inside main div
+  */
+  // if (selectorExists(['#cmp-container-id'])) {
   //   cmpOptOut();
   //   clearInterval(interval);
   // }
