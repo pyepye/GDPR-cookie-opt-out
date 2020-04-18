@@ -33,7 +33,7 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
 ## ToDo
 * Examples
     * All? https://advertisingconsent.eu/ / https://advertisingconsent.eu/cmp-list/
-
+    
     * https://www.express.co.uk/
     * http://www.churchnewspaper.com/
     * https://www.smallholder.co.uk/
@@ -42,7 +42,7 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * http://cj.dotomi.com/m7122wktsA/krw/98BF98CG/ACHAHC/8/8/8?k=kzpk%3DGGE9BEC98_tlyjo%3C%3Co00w%3A%2F%2F333.qkvxvj5.jvt%3AF7%2Fjspjr-9BG9GB-87AE87BF%3C%3CN%3C%3C%3C8%3C8%3C7%3C7%3C
     * https://www.ocs.fr/
     * https://www.tomshardware.co.uk/
-
+    * https://www.rakuten.co.uk/shop/the-game-collection
     AppNexus CMP
     https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
 
