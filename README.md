@@ -1,10 +1,11 @@
 # Cookie Opt-out
 
-Automatically Opt-out of GDPR cookie measures
+Extension to opt-out of GDPR cookie measures by automatically clicking the buttons for you
+
 
 ## Install
 
-	$ npm install
+	npm install
 
 ## Development
 
@@ -20,20 +21,16 @@ Automatically Opt-out of GDPR cookie measures
     npm run build opera
     npm run build edge
 
-## Environment
 
-The build tool also defines a variable named `process.env.NODE_ENV` in your scripts.
+## Built using
 
-## Docs
-
-* [webextension-toolbox](https://github.com/HaNdTriX/webextension-toolbox)
-
+* [webextension-toolbox](https://github.com/webextension-toolbox/webextension-toolbox)
 
 
 ## ToDo
 * Examples
     * All? https://advertisingconsent.eu/ / https://advertisingconsent.eu/cmp-list/
-    
+
     * https://www.express.co.uk/
     * http://www.churchnewspaper.com/
     * https://www.smallholder.co.uk/
@@ -44,7 +41,7 @@ The build tool also defines a variable named `process.env.NODE_ENV` in your scri
     * https://www.tomshardware.co.uk/
     * https://www.rakuten.co.uk/shop/the-game-collection
     * https://linuxhostsupport.com/blog/how-to-set-up-and-use-yum-repositories-on-centos-7/
-    
+
     AppNexus CMP
     https://www.notebookcheck.net/Huawei-P-Smart-2019-Smartphone-Review.387466.0.html
 
